@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Android-HW-7.1</string>
+    <string name="main_activity_name">Калькулятор</string>
+    <string name="text_view_default_value">0</string>
+    <string name="btn_seven">7</string>
+    <string name="btn_eight">8</string>
+    <string name="btn_nine">9</string>
+    <string name="btn_four">4</string>
+    <string name="btn_five">5</string>
+    <string name="btn_six">6</string>
+    <string name="btn_one">1</string>
+    <string name="btn_two">2</string>
+    <string name="btn_three">3</string>
+    <string name="btn_point">\u002E</string>
+    <string name="btn_zero">0</string>
+    <string name="too_many_characters">Слишком много символов!</string>
+    <string name="btn_action_reset">\u0043</string>
+    <string name="text_view_action_reset">""</string>
+    <string name="btn_action_change_of_sign">\u00B1</string>
+    <string name="btn_action_percent">\u0025</string>
+    <string name="btn_action_division">\u00F7</string>
+    <string name="btn_action_multiplication">×</string>
+    <string name="btn_action_subtraction">-</string>
+    <string name="btn_action_addition">+</string>
+    <string name="btn_action_equally">=</string>
+    <string name="Z">Z</string>
+    <string name="U">U</string>
+    <string name="B">B</string>
+    <string name="O">O</string>
+    <string name="V">V</string>
+</resources>

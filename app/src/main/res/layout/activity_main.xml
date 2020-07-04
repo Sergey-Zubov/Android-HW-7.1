@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/calc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+
+    <TextView
+        android:id="@+id/textViewValues"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/text_view_background"
+        android:paddingEnd="10dp"
+        android:text="@string/text_view_default_value"
+        android:textAlignment="textEnd"
+        android:textSize="80sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/chainHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewValues">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chainHorizontalAbove"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/firstTextViewAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Z"
+                android:textSize="18sp"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintEnd_toStartOf="@+id/secondTextViewAbove"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/secondTextViewAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/U"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/thirdTextViewAbove"
+                app:layout_constraintStart_toEndOf="@+id/firstTextViewAbove"
+                app:layout_constraintTop_toTopOf="@+id/firstTextViewAbove"
+                app:layout_constraintBottom_toBottomOf="@+id/firstTextViewAbove">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/thirdTextViewAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/B"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/foursTextViewAbove"
+                app:layout_constraintStart_toEndOf="@+id/secondTextViewAbove"
+                app:layout_constraintTop_toTopOf="@+id/secondTextViewAbove"
+                app:layout_constraintBottom_toBottomOf="@+id/secondTextViewAbove">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/foursTextViewAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/O"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/lustTextViewAbove"
+                app:layout_constraintStart_toEndOf="@+id/thirdTextViewAbove"
+                app:layout_constraintTop_toTopOf="@+id/thirdTextViewAbove"
+                app:layout_constraintBottom_toBottomOf="@+id/thirdTextViewAbove">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lustTextViewAbove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/V"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foursTextViewAbove"
+                app:layout_constraintTop_toTopOf="@+id/foursTextViewAbove"
+                app:layout_constraintBottom_toBottomOf="@+id/foursTextViewAbove">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <LinearLayout
+            android:id="@+id/firstColumnBtnsActions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chainHorizontalAbove"
+            android:layout_alignParentEnd="true"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnActionDivision"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_division"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionMultiplication"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_multiplication"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionSubtraction"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_subtraction"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionAddition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_addition"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionEqually"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_equally"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/firstRowBtnsActions"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/chainHorizontalAbove"
+            android:layout_toStartOf="@id/firstColumnBtnsActions"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnActionReset"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_reset"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionChangeOfSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_change_of_sign"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnActionPercent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_action_percent"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/firstRowBtnsNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstRowBtnsActions"
+            android:layout_toStartOf="@id/firstColumnBtnsActions"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_seven"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnEight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_eight"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnNine"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_nine"
+                android:textSize="40sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/secondRowBtnsNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/firstRowBtnsNumbers"
+            android:layout_toStartOf="@id/firstColumnBtnsActions"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_four"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_five"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_six"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/thirdRowBtnsNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/secondRowBtnsNumbers"
+            android:layout_toStartOf="@id/firstColumnBtnsActions"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_one"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_two"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_three"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lustRowBtnsNumbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/thirdRowBtnsNumbers"
+            android:layout_toStartOf="@id/firstColumnBtnsActions"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnZero"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="10dp"
+                android:text="@string/btn_zero"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/btnPoint"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:padding="10dp"
+                android:text="@string/btn_point"
+                android:textSize="40sp" />
+
+        </LinearLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chainHorizontalBelow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/lustRowBtnsNumbers">
+
+            <TextView
+                android:id="@+id/firstTextViewBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Z"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/secondTextViewBelow"
+                app:layout_constraintHorizontal_chainStyle="spread"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" >
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/secondTextViewBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/U"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/firstTextViewBelow"
+                app:layout_constraintEnd_toStartOf="@+id/thirdTextViewBelow"
+                app:layout_constraintStart_toEndOf="@+id/firstTextViewBelow"
+                app:layout_constraintTop_toTopOf="@+id/firstTextViewBelow">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/thirdTextViewBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/B"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/secondTextViewBelow"
+                app:layout_constraintEnd_toStartOf="@+id/foursTextViewBelow"
+                app:layout_constraintStart_toEndOf="@+id/secondTextViewBelow"
+                app:layout_constraintTop_toTopOf="@+id/secondTextViewBelow">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/foursTextViewBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/O"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/thirdTextViewBelow"
+                app:layout_constraintEnd_toStartOf="@+id/lustTextViewBelow"
+                app:layout_constraintStart_toEndOf="@+id/thirdTextViewBelow"
+                app:layout_constraintTop_toTopOf="@+id/thirdTextViewBelow">
+
+            </TextView>
+
+            <TextView
+                android:id="@+id/lustTextViewBelow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/V"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@+id/foursTextViewBelow"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/foursTextViewBelow"
+                app:layout_constraintTop_toTopOf="@+id/foursTextViewBelow">
+
+            </TextView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
